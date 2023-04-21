@@ -6,8 +6,138 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+/* 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: Courier, monospace;
+} */
+
+.card{
+  cursor: pointer;
+  background: rgb(231, 231, 231);
+  border-radius: 10px;
+  margin: 2rem 2rem;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 1rem 1rem;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card_image {
+  width: 165px;
+  height: 250px;
+}
+
+.card_image img {
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.book_list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.page {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 1rem;
+  padding-bottom: 20px;
+}
+
+.page button {
+  width: 40px;
+  height: 40px;
+  font-weight: 600;
+  font-size: 16px;
+  margin: 0 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: transparent;
+  align-items: center;
+  appearance: none;
+  background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);
+  border: 0;
+  box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  text-align: left;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow,transform;
+}
+
+.page button.active {
+  font-weight: 900;
+  border-color: #101010;
+  background: rgb(231, 231, 231);
+  color: #101010;
+}
+
+.sort{
+  display: flex;
+  justify-content: center;
+}
+
+.sort_button{
+  padding: 10px;
+}
+
+.sort_button button{
+  padding: 10px;
+  align-items: center;
+  font-weight: 500;
+  font-size: 16px;
+  appearance: none;
+  background-image: radial-gradient(100% 100% at 100% 0, hsl(193, 100%, 68%) 0, #5468ff 100%);
+  border: 0;
+  box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  text-align: left;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+}
+
+.sort_button button:hover{
+  transform: scale(1.1);
+}
+
+.navbar h1{
+  font-size: clamp(3rem, 10vmin, 8rem);
+  font-family: sans-serif;
+  color: #5468ff;
+  text-shadow: 2px 2px #5adaff;
+}
+.navbar h2{
+  font-family: Papyrus, fantasy;
+  font-size: 30px;
+  text-shadow: 1px 1px grey;
 }
